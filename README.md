@@ -11,10 +11,8 @@ CiviCRM 4.2+
 
 #Installation
 
-##Download this extension: 
-
-
-* Extract it to your CiviCRM Extensions Directory
+* Download this extension.
+* Extract it to your CiviCRM Extensions Directory.
 * Load your extension in CiviCRM Extensions page.
 
 
