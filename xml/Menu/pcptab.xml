@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/contact/view/pcps</path>
+    <page_callback>CRM_Pcptab_Page_Main</page_callback>
+    <title>Contact Personal Campaign Pages</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/ajax/contactpcps</path>
+    <page_callback>CRM_Pcptab_Page_AJAX::getContactPCPs</page_callback>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
