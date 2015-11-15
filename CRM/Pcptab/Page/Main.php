@@ -14,9 +14,6 @@ class CRM_Pcptab_Page_Main extends CRM_Core_Page {
     // check logged in url permission
     require_once 'CRM/Contact/Page/View.php';
     CRM_Contact_Page_View::checkUserPermission( $this );
-        
-    $this->_action = CRM_Utils_Request::retrieve('action', 'String', $this, false, 'browse');
-    $this->assign( 'action', $this->_action);
 
     return parent::run();
   }
