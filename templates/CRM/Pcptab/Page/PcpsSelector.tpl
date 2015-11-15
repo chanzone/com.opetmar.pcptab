@@ -11,7 +11,7 @@
       <th class='crm-contact-pcp-no_of_contributions nosort' style="background:white;">{ts}No of Contributions{/ts}</th>
       <th class='crm-contact-pcp-amount_raised nosort' style="background:white;">{ts}Amount Raised{/ts}</th>
       <th class='crm-contact-pcp-target_amount nosort' style="background:white;">{ts}Target Amount{/ts}</th>
-      <th class='crm-contact-pcp-links nosort' style="background:white;">Action</th>
+      <th class='crm-contact-pcp-links nosort' style="background:white;">{ts}Action{/ts}</th>
     </tr>
     </thead>
   </table>
