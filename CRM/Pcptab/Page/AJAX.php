@@ -6,17 +6,16 @@ class CRM_Pcptab_Page_AJAX {
    * Retrieve contact PCPs.
    */
   public static function getContactPCPs() {
-    $contactID = CRM_Utils_Type::escape($_GET['cid'], 'Integer');
+    $contactID = CRM_Utils_Request::retrieve( 'cid', 'Positive', $this, true );
 
-    $sEcho = CRM_Utils_Type::escape($_REQUEST['sEcho'], 'Integer');
-    $page = isset($_REQUEST['iDisplayStart']) ? CRM_Utils_Type::escape($_REQUEST['iDisplayStart'], 'Integer') : 0;
-    $limit = isset($_REQUEST['iDisplayLength']) ? CRM_Utils_Type::escape($_REQUEST['iDisplayLength'], 'Integer') : 25;
+    $sEcho = CRM_Utils_Request::retrieve( 'sEcho', 'Positive', $this, true );
+    $page = isset($_REQUEST['iDisplayStart']) ? CRM_Utils_Request::retrieve( 'iDisplayStart', 'Positive', $this, true ) : 0;
+    $limit = isset($_REQUEST['iDisplayLength']) ? CRM_Utils_Request::retrieve( 'iDisplayLength', 'Positive', $this, true ) : 25;
 	
-	$page = $page/$limit;
-    $params = $_POST;
+    $page = $page/$limit;
 
     $params['limit'] = $limit;
-	$params['offset'] = ($page*$limit);
+    $params['offset'] = ($page*$limit);
 	
     $params['contact_id'] = $contactID;
 	
